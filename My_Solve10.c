@@ -204,19 +204,19 @@ int main()
         printf("7)Listele\n");
         printf("8)Çıkış\n");
 
-        scanf("%d",secim);
+        scanf("%d",&secim);
         switch (secim)
         {
         case 1:
             printf("Listeye eleman eklemeyi sectiniz\n");
             printf("Basa eklemek istediğiniz elemanı yazınız::");
-            scanf("%d",number);
+            scanf("%d",&number);
             basa_ekle(number);
             break;
         case 2:
             printf("Sona eleman eklemeyi sectiniz\n");
             printf("Sona eklemek istediğiniz elemanı seçiniz\n");
-            scanf("%d",number);
+            scanf("%d",&number);
             sona_ekle(number);
             break;
 
@@ -238,7 +238,7 @@ int main()
         case 7:
             printf("Elemanlar listeleniyor");
             listele();
-
+            break;
         case 8: 
                 cikis();
         default:
