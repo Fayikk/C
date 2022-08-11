@@ -40,11 +40,6 @@ void dequeque(){
         front=temp;
         
     }
-    
-    
-
-
-
 }
 void Display(){
     if(front==NULL){
