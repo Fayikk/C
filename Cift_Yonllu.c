@@ -8,9 +8,9 @@ struct node{
     struct node * prev;
 };
 struct node * start=NULL;
-
+struct node * temp2=NULL;
 struct node * temp=NULL;
-
+struct node * temp3=NULL;
 struct node * dugumOlustur(int veri){
     struct node * yenidugum;
     yenidugum=(struct node *)malloc(sizeof(struct node));
@@ -76,6 +76,65 @@ void Araya_Ekle(int veri,int n){
     
     
 }
+
+void Bastan_Sil(){
+    if (start==NULL)
+    {
+        printf("Listede silinecek eleman yoktur");
+    }
+    else
+    {
+        temp=start->next;
+        free(start);
+        start=temp;
+
+    }
+    
+    
+}
+
+void Aradan_Sil(int n){//n değerli elemandan bir önceki değer silinecektir.
+    if (start==NULL)
+    {
+        printf("Silinecek eleman bulunamamaktadır");
+    }
+    else
+    {
+        temp=start;
+        while (temp->next->data!=n)
+        {
+            temp=temp->next;
+        }
+        temp2=temp->prev;
+        temp3=temp->next;
+        free(temp);
+        temp2->next=temp3;
+        temp3->prev=temp2;
+    }
+    
+    
+}
+
+void Sondan_Sil(){
+    if (start==NULL)
+    {
+        printf("Listede eleman bulunamamaktadır");
+    }
+    else
+    {
+        temp=start;
+        while (temp->next!=NULL)
+        {
+            temp=temp->next;
+        }
+        temp2=temp->prev;
+        free(temp);
+        temp2->next=NULL;
+    }
+    
+    
+}
+
 void yazdir(){
     if (start==NULL)
     {
@@ -104,8 +163,11 @@ Sona_Ekle(3);
 Sona_Ekle(4);
 Sona_Ekle(5);
 Basa_Ekle(9);
+Aradan_Sil(33);
 Araya_Ekle(8,2);
 Araya_Ekle(33,8);
+Sondan_Sil();
+// Bastan_Sil();
 yazdir();
 
 
