@@ -12,7 +12,7 @@
 #define boy 10
 
 int dizi[boy];
-int bas=-1,son=-1;//bas front iken,son rear'ı ifade etmektedir.e
+int bas=-1,son=-1;//bas front iken,son rear'ı ifade etmektedir.
 //Yukarıda görüldüğü gibi bas ve son değerlerline -1 değer ataması yaptık.
 //Bunun sebebi ise kuyruk için oluşturduğumuz dizinin indeksi 0 tabanlı indisleme'ye sahiptir.
 //Eleman ekleme işlemlerinde 1 değer arttırılırsa dizinin ilk elemanının indis'i '0' olacaktır.
